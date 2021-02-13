@@ -20,8 +20,6 @@ class Router {
             route: route,
             action: handle
         });
-
-        console.log(this.routes);
     }
 
     public post(route: String, handle:any = null) {

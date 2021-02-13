@@ -1,10 +1,10 @@
+import router from '../src/routes';
 import Router from '../services/router/index';
 
 class Kernel {
     public handle() {
-        let routes = Router.getInstance().getAllRegisteredRoutes();
-
-        console.log(routes);
+        let routes = router.getAllRegisteredRoutes();
+        
     }
 }
 

@@ -1,4 +1,4 @@
-import register from '../src/routes';
+import router from '../src/routes';
 
 class RouteRegistrar {
 
@@ -7,7 +7,7 @@ class RouteRegistrar {
     }
 
     private registerRoutes() {
-        register();
+
     }
 }
 
