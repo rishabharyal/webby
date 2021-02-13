@@ -1,5 +1,5 @@
 class Router {
-    
+
     private static instance: Router;
     private routes: Array<Object> = [];
 
@@ -15,7 +15,7 @@ class Router {
     }
 
     public middleware(item: any = '') {
-        
+
         return this;
     }
 

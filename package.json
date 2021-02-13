@@ -15,7 +15,7 @@
   ],
   "author": "Rishabh Aryal, Sujan Dahal",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "@types/node": "^14.14.27"
   }
 }
