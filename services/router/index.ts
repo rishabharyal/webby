@@ -14,12 +14,19 @@ class Router {
         return this.routes;
     }
 
+    public middleware(item: any = '') {
+        
+        return this;
+    }
+
     public get(route: String, handle:any = null) {
         this.routes.push({
             type: 'GET',
             route: route,
             action: handle
         });
+
+        return this;
     }
 
     public post(route: String, handle:any = null) {
@@ -28,6 +35,8 @@ class Router {
             route: route,
             action: handle
         });
+
+        return this;
     }
 
     public put(route: String, handle:any = null) {
@@ -36,6 +45,8 @@ class Router {
             route: route,
             action: handle
         });
+
+        return this;
     }
 
     public delete(route: String, handle:any = null) {
@@ -44,6 +55,8 @@ class Router {
             route: route,
             action: handle
         });
+
+        return this;
     }
 }
 
