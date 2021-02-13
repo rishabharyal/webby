@@ -1,0 +1,18 @@
+{
+  "name": "webby",
+  "version": "1.0.0",
+  "description": "A web backend for our social app.",
+  "main": "dist/app.js",
+  "scripts": {
+    "build": "tsc app.ts --outDir ./dist",
+    "dev": "tsc -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "backend",
+    "web",
+    "framework"
+  ],
+  "author": "Rishabh Aryal, Sujan Dahal",
+  "license": "ISC"
+}
