@@ -1,5 +1,6 @@
+
 class Controller {
-    public response(data: any) {
+    public response(data: Array<String>) {
         return JSON.stringify(data);
-    }    
+    }
 }

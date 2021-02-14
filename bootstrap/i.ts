@@ -1,5 +1,9 @@
 import Kernel from "../src/Kernel";
 
+interface classREf {
+
+}
+
 class i {
     public loadRegistrar(registrations:Array<any>) {
         registrations.forEach(r => {
@@ -12,7 +16,6 @@ class i {
     }
 
     public singleton(classRef: any) {
-        console.log(classRef.getInstance(), new classRef);
         classRef.getInstance();
     }
 }

@@ -1,7 +1,15 @@
+interface routes {
+    type: String,
+    route: String,
+    action: String | null,
+}
+
+
+
 class Router {
 
     private static instance: Router;
-    private routes: Array<Object> = [];
+    private routes: Array<routes> = [];
 
     public static getInstance(): Router {
         if (!Router.instance) {
@@ -10,7 +18,7 @@ class Router {
         return Router.instance;
     }
 
-    public getAllRegisteredRoutes(): Array<any> {
+    public getAllRegisteredRoutes(): Array<routes> {
         return this.routes;
     }
 
@@ -19,7 +27,7 @@ class Router {
         return this;
     }
 
-    public get(route: String, handle:any = null) {
+    public get(route: String, handle:String | null) {
         this.routes.push({
             type: 'GET',
             route: route,
@@ -29,7 +37,7 @@ class Router {
         return this;
     }
 
-    public post(route: String, handle:any = null) {
+    public post(route: String, handle:String | null) {
         this.routes.push({
             type: 'POST',
             route: route,
@@ -39,7 +47,7 @@ class Router {
         return this;
     }
 
-    public put(route: String, handle:any = null) {
+    public put(route: String, handle:String | null) {
         this.routes.push({
             type: 'PUT',
             route: route,
@@ -49,7 +57,7 @@ class Router {
         return this;
     }
 
-    public delete(route: String, handle:any = null) {
+    public delete(route: String, handle:String | null) {
         this.routes.push({
             type: 'DELETE',
             route: route,

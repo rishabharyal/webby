@@ -1,8 +1,13 @@
 import router from '../src/routes';
-import Router from '../services/router/index';
 import * as http from "http";
 
 import Web from './middlewares/web';
+
+interface routes {
+    type: String,
+    route: String,
+    action: String | null
+}
 
 class Kernel {
     private middlewares: Array<Object> = [
@@ -10,19 +15,20 @@ class Kernel {
     ];
     public handle() {
         let self = this;
-        http.createServer(function(req:any, res:any) {
-            self.handleRouteAction(req, res);
+        http.createServer(function( req:http.IncomingMessage, res:http.ServerResponse) {
+
+            return self.handleRouteAction(req, res);
         }).listen(8898);
 
         let routes = router.getAllRegisteredRoutes();
-        routes.forEach((item: any) => {
-            // handler..
+        routes.forEach((item: routes) => {
+
         });
     }
 
-    private handleRouteAction(req:any, res:any) {
-        console.log(req);
-        res.writeHead(200, {'Content-Type': 'application/json'});        
+    private handleRouteAction(req:http.IncomingMessage, res:http.ServerResponse) {
+        console.log();
+        res.writeHead(200, {'Content-Type': 'application/json'});
         res.write('{"hello": "world"}');
         res.end();
     }
